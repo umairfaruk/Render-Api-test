@@ -7,7 +7,8 @@ const port = 3000;
 app.use(express.json());
 
 // Endpoint 1: Get a greeting message
-app.get('/greet', (req, res) => {
+app.post('/greet', (req, res) => {
+  console.log(req.body);
   res.json({ message: 'Hello, welcome to the Express app!' });
 });
 
